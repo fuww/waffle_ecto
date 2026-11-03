@@ -51,7 +51,8 @@ defmodule Waffle.Ecto.Schema do
 
   """
   defmacro cast_attachments(changeset_or_data, params, allowed, options \\ []) do
-    quote bind_quoted: [
+    quote generated: true,
+          bind_quoted: [
             changeset_or_data: changeset_or_data,
             params: params,
             allowed: allowed,
